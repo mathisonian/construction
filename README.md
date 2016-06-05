@@ -20,11 +20,32 @@ c.frame((count) => {
     c.clear()
     c.rect(opts)
 })
+```
 
 ## 3d api sketch
 
 ```
+var Construction = require('construction/3d');
+var c = new Construction({el: el})
 
+c.camera({position: [0, 0, 0], lookat: [0, 1, 0]})
+
+// add a light
+c.light({type: 'point', position: []})
+
+// immediately draw to the canvas
+c.sphere({position: [x, y, z], size: r, color: 'red'})
+c.box({position: [x, y, z], size: [w, h, d], color: '#333'})
+
+// draw multiple objects
+c.sphere([{x: x1, y: y1, z: z1}, {x: x2, y: y2, z: z2}])
+
+
+// draw loop
+c.frame((count) => {
+    c.clear()
+    c.rect(opts)
+})
 ```
 
 ### available methods
