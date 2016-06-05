@@ -40,7 +40,6 @@ c.box({position: [x, y, z], size: [w, h, d], color: '#333'})
 // draw multiple objects
 c.sphere([{position: [x1, y1, z1]}, {position: [x2, y2, z2]}])
 
-
 // draw loop
 c.frame((count) => {
     c.clear({color: 'black'})
