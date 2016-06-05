@@ -2,19 +2,19 @@
 shape primitives built on top of regl
 
 
-## api sketch
+## 2d api sketch
 
 ```js
-var ReglShape = require('regl-shape');
+var Construction = require('construction/2d');
 
-rs = new ReglShape({
+var c = new Construction({
   width: // provide width & height or an existing canvas elt
   height: 
   domain: [xMin, xMax], // optional, defaults to 0-1
   range: [yMin, yMax]
 })
 
-points = rs.circle({
+points = c.circle({
   x: [], 
   y: [],
   r: [], // singleton or array
@@ -31,13 +31,18 @@ points.set({
 }) // animated update step
 ```
 
+## 3d api sketch
+
+```
+...
+```
 
 ### available methods
 
+#### 2d
  * .circle()
  * .rect()
- * .line()
- * .path()
  * what else?
 
+#### 3d
 
