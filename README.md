@@ -9,15 +9,15 @@ var Construction = require('construction/2d');
 var c = new Construction({el: el})
 
 // immediately draw to the canvas
-c.circle({x: x, y: y, r: r, color: 'red'})
-c.rect({x: x, y: y, width: w, height: h, color: '#333'})
+c.circle({position: [x, y], size: r, color: 'red'})
+c.rect({position: [x, y], size: [w, h], color: '#333'})
 
 // draw multiple circles
-c.circle([{x: x1, y: y1}, {x: x2, y: y2}])
+c.circle([{position: [x1, y1]}, {position: [x2, y2]}])
 
 // draw loop
 c.frame((count) => {
-    c.clear()
+    c.clear({color: 'black'})
     c.rect(opts)
 })
 ```
@@ -38,12 +38,12 @@ c.sphere({position: [x, y, z], size: r, color: 'red'})
 c.box({position: [x, y, z], size: [w, h, d], color: '#333'})
 
 // draw multiple objects
-c.sphere([{x: x1, y: y1, z: z1}, {x: x2, y: y2, z: z2}])
+c.sphere([{position: [x1, y1, z1]}, {position: [x2, y2, z2]}])
 
 
 // draw loop
 c.frame((count) => {
-    c.clear()
+    c.clear({color: 'black'})
     c.rect(opts)
 })
 ```
