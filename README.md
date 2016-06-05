@@ -1,5 +1,5 @@
-# regl-shape
-shape primitives built on top of regl
+# construction
+2d and 3d shape primitives for webgl, built with regl
 
 
 ## 2d api sketch
