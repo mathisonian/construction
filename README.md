@@ -24,7 +24,7 @@ c.frame((count) => {
 
 ## 3d api sketch
 
-```
+```js
 var Construction = require('construction/3d');
 var c = new Construction({el: el})
 
