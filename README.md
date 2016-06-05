@@ -1,5 +1,5 @@
 # construction
-2d and 3d shape primitives for webgl, built with regl
+2d and 3d shape primitives for webgl, built with [regl](https://github.com/mikolalysenko/regl)
 
 
 ## 2d api sketch
@@ -17,7 +17,7 @@ c.circle([{position: [x1, y1]}, {position: [x2, y2]}])
 
 // draw loop
 c.frame((count) => {
-    c.clear({color: 'black'})
+    c.background({color: 'black'})
     c.rect(opts)
 })
 ```
@@ -42,7 +42,7 @@ c.sphere([{position: [x1, y1, z1]}, {position: [x2, y2, z2]}])
 
 // draw loop
 c.frame((count) => {
-    c.clear({color: 'black'})
+    c.background({color: 'black'})
     c.rect(opts)
 })
 ```
