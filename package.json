@@ -1,0 +1,38 @@
+{
+  "name": "construction",
+  "version": "1.0.0",
+  "description": "2d and 3d shape primitives for webgl",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "budo examples/index.js --live -o -- -t [ babelify --presets [ es2015 react stage-0 ] ] -t glslify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathisonian/construction.git"
+  },
+  "keywords": [
+    "webgl",
+    "shapes",
+    "3d",
+    "2d",
+    "drawing"
+  ],
+  "author": "Matthew Conlen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathisonian/construction/issues"
+  },
+  "homepage": "https://github.com/mathisonian/construction#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0",
+    "babelify": "^7.3.0",
+    "budo": "^8.3.0",
+    "glslify": "^5.0.2"
+  },
+  "dependencies": {
+    "regl": "^0.5.0"
+  }
+}
