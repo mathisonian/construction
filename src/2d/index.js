@@ -1,12 +1,11 @@
 import regl from 'regl';
-import * as Commands  from './commands';
+import commands  from './commands';
 
 class Construction {
 
   constructor(options) {
     this.regl = regl();
-    this.commands = {};
-    this.commands.triangle = Commands.triangle(this.regl);
+    this.commands = commands(this.regl);
   }
 
   background (options) {
