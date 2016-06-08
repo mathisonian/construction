@@ -41,7 +41,16 @@ class Construction {
     }]);
   }
 
+  ellipse (options) {
+    const { position, size, color } = options;
 
+    console.log(size);
+    this.commands.ellipse({
+      position: this.regl.buffer(position),
+      size: size,
+      color: color
+    });
+  }
 }
 
 

@@ -9,8 +9,7 @@ export default (regl) => {
     },
     uniforms: {
       color: regl.prop('color'),
-      width: regl.prop('width'),
-      height: regl.prop('height'),
+      size: regl.prop('size')
     },
     count: 1,
     primitive: 'points'
