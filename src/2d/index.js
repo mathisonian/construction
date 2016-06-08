@@ -60,6 +60,15 @@ class Construction {
       color: color
     });
   }
+
+  line (options) {
+    const { start, end, color } = options;
+
+    this.commands.line({
+      position: this.regl.buffer(start.concat(end)),
+      color: color
+    });
+  }
 }
 
 
