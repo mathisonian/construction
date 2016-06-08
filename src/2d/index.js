@@ -44,10 +44,19 @@ class Construction {
   ellipse (options) {
     const { position, size, color } = options;
 
-    console.log(size);
     this.commands.ellipse({
       position: this.regl.buffer(position),
       size: size,
+      color: color
+    });
+  }
+
+  circle (options) {
+    const { position, size, color } = options;
+
+    this.commands.ellipse({
+      position: this.regl.buffer(position),
+      size: [size, size],
       color: color
     });
   }
