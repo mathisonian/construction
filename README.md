@@ -43,16 +43,19 @@ c.sphere([{position: [x1, y1, z1]}, {position: [x2, y2, z2]}])
 // draw loop
 c.frame((count) => {
     c.background({color: 'black'})
-    c.rect(opts)
+    c.box(opts)
 })
 ```
 
 ### available methods
 
 #### 2d
- * .circle()
- * .rect()
- * what else?
+
+* ellipse()
+* rect()
+* line()
+* triangle()
+* ...
 
 #### 3d
 
