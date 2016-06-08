@@ -41,6 +41,26 @@ class Construction {
     }]);
   }
 
+  square (options) {
+    const { position, size } = options;
+    const vertices = [[
+      [position[0], position[1]],
+      [position[0], position[1] + size],
+      [position[0] + size, position[1] + size],
+    ], [
+      [position[0], position[1]],
+      [position[0] + size, position[1]],
+      [position[0] + size, position[1] + size],
+    ]];
+    this.commands.triangle([{
+      position: this.regl.buffer(vertices[0]),
+      color: options.color
+    }, {
+      position: this.regl.buffer(vertices[1]),
+      color: options.color
+    }]);
+  }
+
   ellipse (options) {
     const { position, size, color } = options;
 
@@ -69,6 +89,25 @@ class Construction {
       color: color
     });
   }
+
+  triangle (options) {
+    const { vertices, color } = options;
+    this.commands.triangle({
+      position: this.regl.buffer(vertices),
+      color: color
+    });
+  }
+
+  arc (options) {
+    const { position, color, size, angle, offset } = options;
+    this.commands.arc({
+      position: this.regl.buffer(position),
+      angle: angle,
+      size: size,
+      color: color
+    })
+  }
+
 }
 
 

@@ -27,4 +27,10 @@ c.frame((count) => {
     end: [0.5 * Math.cos(count / 300), 0.5 * Math.sin(count / 300)],
     color: [0, 0, 0, 1]
   })
+
+  c.arc({
+    position: [0.5, -0.5],
+    angle: [0.5, 2 * Math.PI * Math.abs(Math.sin(count % 300 / 300))],
+    color: [0, 0, 0, 1]
+  })
 })
