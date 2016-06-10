@@ -1,8 +1,9 @@
 # construction
-2d and 3d shape primitives for webgl, built with [regl](https://github.com/mikolalysenko/regl)
+
+2d and 3d shape primitives for webgl, built with [regl](https://github.com/mikolalysenko/regl), inspired by [processing](http://p5js.org/)
 
 
-## 2d api sketch
+## 2d Example
 
 ```js
 var Construction = require('construction/2d');
@@ -22,7 +23,7 @@ c.frame((count) => {
 })
 ```
 
-## 3d api sketch
+## 3d Example
 
 ```js
 var Construction = require('construction/3d');
@@ -55,7 +56,7 @@ c.frame((count) => {
 * rect()
 * line()
 * triangle()
-* ...
+* arc()
 
 #### 3d
 
