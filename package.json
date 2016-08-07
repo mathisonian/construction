@@ -4,7 +4,9 @@
   "description": "2d and 3d shape primitives for webgl",
   "main": "src/index.js",
   "scripts": {
-    "start": "budo examples/index.js --live -o -- -t [ babelify --presets [ es2015 react stage-0 ] ] -t glslify",
+    "start": "npm run example:2d",
+    "example:2d": "budo examples/2d.js --live -o -- -t [ babelify --presets [ es2015 react stage-0 ] ] -t glslify",
+    "example:3d": "budo examples/3d.js --live -o -- -t [ babelify --presets [ es2015 react stage-0 ] ] -t glslify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
